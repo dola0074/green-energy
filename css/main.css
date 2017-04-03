@@ -1,0 +1,185 @@
+/*
+COLOUR SCHEME: 
+Purple - #42282F
+Teal - #74A588
+Beige - #D6CCAD
+Orange - #DC9C76
+Red-Orange - #D6655A
+*/
+
+@import url('https://fonts.googleapis.com/css?family=Barrio|Raleway');
+
+* {
+    box-sizing: border-box;
+}
+header {
+    background-color: #74a588;
+    font-family: 'Barrio', cursive;
+    height: 300px;
+    color: #42282F;
+    background-image: url(../img/header_img.jpg);
+    
+}
+
+img {
+    width: 100%;
+    height: auto;
+    background-size: contain;
+    
+}
+
+
+h1 {
+    color: #42282F;
+    float: right;   
+    font-size: 60pt;
+}
+h3 {
+    font-family: 'Barrio', cursive;
+    color: #D6CCAD;  
+    font-size: 25pt;
+    text-align: center;
+}
+
+body {
+  background-color: #42282F;
+    
+}
+
+figcaption {
+    font-family: 'Barrio', cursive;
+    color: #D6CCAD;  
+    font-size: 16pt;
+    text-align: center;
+}
+
+nav ul li {
+    font-size: 20pt;
+    text-align: center;
+    text-decoration: none;
+    font-family: 'Barrio', cursive;
+    color: #D6CCAD;
+    overflow: hidden;
+}
+
+.box ul li {
+    text-align: center;
+    font-size: 20pt;
+    text-align: center;
+    list-style-type: none;
+    font-family: 'Barrio', cursive;
+    color: #D6CCAD;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+}
+
+/* Slider Animation */
+
+@keyframes transition {
+    0%   {opacity: 0;}
+    25%  {opacity: 1;}
+    50%  {opacity: 1;}
+    100% {opacity: 0;}
+}
+
+.showing {
+    animation-name: transition;
+    animation-duration: 6s;
+}
+
+
+
+footer {
+    background-color: #D6CCAD;
+    font-family: 'Raleway', sans-serif;
+    color: #42282F;
+    width: 100%;
+    height: auto;
+}
+
+.contact ul li {
+    list-style-type: none;
+    text-align: center;
+}
+.socials ul li {
+    list-style-type: none;
+    display: inline;
+    text-align: center;
+}
+
+#active {
+    color: #74A588;
+}
+/* Media Query */
+
+/* TABLET  */
+@media screen and (min-width: 35rem) and (max-width: 80rem) {
+    body {
+        font-size: 1rem;
+    }
+    
+    .navbar li {
+        display: inline-block;
+        width: calc(20% - 6px);
+    }
+    
+       .box ul::after {
+        content: "";
+        display: block;
+        clear: left;
+    }
+    
+    
+    .box ul li {
+    
+        width: calc(33.33% - 1rem + 0.33rem);
+        float: left;
+        margin: 0 1rem 1rem 0;
+    }
+    
+    /* Reference:
+       https://developer.mozilla.org/en-US/docs/Web/CSS/:nth-child */
+    .box ul li:nth-child(3n) {
+        margin: 0 0 1rem 0;
+    }
+    
+}
+
+/* DESKTOP - Content needs to be displayed in 4 columns */
+@media screen and (min-width: 80rem) {
+    
+    body {
+        font-size: 1.618rem;
+    }
+    
+    .navbar li {
+        display: inline-block;
+        width: calc(20% - 6px);
+    }
+    
+    .box {
+        width: 75%;
+        margin: 0 auto
+    }
+    
+    .box ul:after {
+        content: "";
+        display: block;
+        clear: left;
+    }
+    
+    .box ul li {
+        width: calc(25% - 0.75rem);
+        float: left;
+        margin: 0 1rem 1rem 0;
+    }
+    
+    .box ul li:nth-child(4n) {
+        margin: 0 0 1rem 0;
+    }
+    
+
+}
+
+
